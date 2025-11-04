@@ -36,7 +36,7 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-  # NEW LINTING SERVICE ADDED HERE 
+  # NEW LINTING SERVICE ADDED HERE
   python-lint:
     # Use the same build context/target as your server service
     build:
@@ -44,9 +44,9 @@ services:
       # If your Dockerfile uses a specific target for linting, include it here
     volumes:
       - .:/app
-    # THE PERMISSION FIX 
+    # THE PERMISSION FIX
     # Run the linting as your host user (replace 1000:1000 with your actual UID:GID)
-    user: "501:20" 
+    user: "501:20"
     # The command to run Ruff
     command: ruff check .
     # Use profiles to prevent this service from running by default when you run 'docker compose up'
