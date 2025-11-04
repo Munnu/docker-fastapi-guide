@@ -33,7 +33,7 @@ jobs:
       # --- NEW STEP TO GET LOWERCASE REPO NAME ---
       - name: Set Lowercase Repository Name
         id: repo_name_step
-        run: echo "LOWER_REPO_NAME=${{ lower(github.event.repository.name) }}" >> $GITHUB_OUTPUT
+        run: echo "LOWER_REPO_NAME=${{ github.event.repository.name }}" >> $GITHUB_OUTPUT
 
       - name: Login to Docker Hub
         # ... (rest of the login step)
